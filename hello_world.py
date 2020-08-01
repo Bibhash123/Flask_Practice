@@ -1,9 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template, url_for
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
+db = SQLAlchemy(app)
 
-@app.route('/hello/<name>')
-def hello_world(name):
-    return "Hello %s"%name
-if __name__=='__main__':
-    app.run(debug=True,use_reloader=False)
+@app.route('/')
+def hello_world():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
