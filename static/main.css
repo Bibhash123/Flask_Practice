@@ -1,4 +1,19 @@
+html{
+background-image:linear-gradient(to bottom right,blue,red,blue,violet,pink,blue);
+background-repeat:no-repeat;
+}
 body{
-margin:0;
+background-size:cover;
 font-family: sans-serif;
+text-align:center;
+}
+table{
+border: solid 1px black;
+}
+td,th{
+border: solid 1px lightgrey;
+}
+h1{
+font-family:algerian;
+text-align:center;
 }
